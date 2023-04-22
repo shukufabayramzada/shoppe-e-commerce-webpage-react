@@ -1,0 +1,27 @@
+@import "variables";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $common-font;
+  font-style: normal;
+}
+
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+.container {
+  max-width: 1248px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 288px;
+  }
+}

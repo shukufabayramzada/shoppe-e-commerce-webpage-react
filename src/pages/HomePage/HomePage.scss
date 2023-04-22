@@ -1,0 +1,279 @@
+.subhead {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 64px;
+  font-weight: 500;
+
+  .shoplatest {
+    line-height: 43px;
+    font-size: 33px;
+    color: $firstfontcolor;
+  }
+
+  nav {
+    .nav-link {
+      font-size: 20px;
+      line-height: 26px;
+      color: $secondfontcolor;
+      text-transform: capitalize;
+      text-decoration: none;
+    }
+  }
+}
+
+.catalog-section {
+  display: flex;
+  flex-direction: column;
+  gap: 79px;
+  margin-top: 39px;
+  width: 100%;
+
+  img {
+    height: 380px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  nav {
+    margin-top: 24px;
+
+    .catalog-element {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 26px;
+      color: $firstfontcolor;
+      text-decoration: none;
+    }
+  }
+
+  .catalog-price {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    color: $secondfontcolor;
+    margin-top: 16px;
+  }
+
+  .image-wrapper {
+    position: relative;
+    display: flex;
+
+    .sale {
+      display: none;
+    }
+  }
+
+  .add-to-cart-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px 4px 0px 0px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+
+  .image-wrapper:hover button {
+    opacity: 1;
+  }
+
+  .first-boxes-part {
+    display: flex;
+    flex-direction: row;
+    gap: 54px;
+    width: 100%;
+
+    .lira-earings {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+    }
+
+    .hal-earings {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+    }
+
+    .kaede-hear-pin {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+    }
+  }
+
+  .second-boxes-part {
+    display: flex;
+    flex-direction: row;
+    gap: 54px;
+    width: 100%;
+
+    .hair-pin-set {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+    }
+
+    .plaine-necklace {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+    }
+
+    .yuki-set {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+
+      .price {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+
+        .price-visible {
+          display: none;
+        }
+
+        .sale-price {
+          display: none;
+        }
+      }
+    }
+
+    .kaede-hear-pin {
+      display: none;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .subhead {
+    margin-top: 21px;
+    font-weight: 400;
+
+    .shoplatest {
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    nav {
+      .nav-link {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .catalog-section {
+    margin-top: 13px;
+    gap: 24px;
+
+    .add-to-cart-button {
+      width: 100%;
+      font-size: 12px;
+      height: 50px;
+      font-weight: 400;
+    }
+
+    nav {
+      margin-top: 6px;
+
+      .catalog-element {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .catalog-price {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 20px;
+      margin-top: 4px;
+    }
+
+    img {
+      height: 136px;
+    }
+
+    .image-wrapper {
+      position: relative;
+
+      .sale {
+        display: flex;
+        background-color: $secondfontcolor;
+        border-radius: 4px;
+        height: 22px;
+        width: 42px;
+        position: absolute;
+        top: 4px;
+        left: 4px;
+
+        .text {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          color: $thirdfontcolor;
+          text-align: center;
+          margin-left: 8px;
+        }
+      }
+    }
+
+    .first-boxes-part {
+      gap: 16px;
+
+      .kaede-hear-pin {
+        display: none;
+      }
+    }
+
+    .second-boxes-part {
+      gap: 16px;
+
+      .plaine-necklace {
+        display: none;
+      }
+
+      .yuki-set {
+        .price {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 20px;
+          margin-top: 4px;
+
+          .catalog-price {
+            display: none;
+          }
+
+          .price-visible {
+            display: flex;
+            color: $secondfontcolor;
+          }
+
+          .sale-price {
+            display: flex;
+            color: red;
+            position: relative;
+
+            .line {
+              display: flex;
+              position: absolute;
+              width: 44px;
+              height: 0;
+              top: 10px;
+              border: 1px solid red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
