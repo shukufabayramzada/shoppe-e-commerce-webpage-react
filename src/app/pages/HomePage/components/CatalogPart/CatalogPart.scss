@@ -1,29 +1,6 @@
-.subhead {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 64px;
-  font-weight: 500;
+@import "../../../../../variables";
 
-  .shoplatest {
-    line-height: 43px;
-    font-size: 33px;
-    color: $firstfontcolor;
-  }
-
-  nav {
-    .nav-link {
-      font-size: 20px;
-      line-height: 26px;
-      color: $secondfontcolor;
-      text-transform: capitalize;
-      text-decoration: none;
-    }
-  }
-}
-
-.catalog-section {
+.home-page .catalog-section {
   display: flex;
   flex-direction: column;
   gap: 79px;
@@ -86,31 +63,6 @@
     opacity: 1;
   }
 
-  .first-boxes-part {
-    display: flex;
-    flex-direction: row;
-    gap: 54px;
-    width: 100%;
-
-    .lira-earings {
-      display: flex;
-      flex-direction: column;
-      border-radius: 8px;
-    }
-
-    .hal-earings {
-      display: flex;
-      flex-direction: column;
-      border-radius: 8px;
-    }
-
-    .kaede-hear-pin {
-      display: flex;
-      flex-direction: column;
-      border-radius: 8px;
-    }
-  }
-
   .second-boxes-part {
     display: flex;
     flex-direction: row;
@@ -154,25 +106,9 @@
     }
   }
 }
+
 @media (max-width: 375px) {
-  .subhead {
-    margin-top: 21px;
-    font-weight: 400;
-
-    .shoplatest {
-      font-size: 16px;
-      line-height: 27px;
-    }
-
-    nav {
-      .nav-link {
-        font-size: 14px;
-        line-height: 22px;
-      }
-    }
-  }
-
-  .catalog-section {
+  .home-page .catalog-section {
     margin-top: 13px;
     gap: 24px;
 

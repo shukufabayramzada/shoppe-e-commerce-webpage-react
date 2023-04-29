@@ -1,0 +1,173 @@
+@import "../../../variables";
+
+.blog-page {
+  margin-top: 96px;
+  .subhead {
+    font-weight: 500;
+    font-size: 33px;
+    color: $firstfontcolor;
+  }
+  .hero-container {
+    display: flex;
+    flex-direction: row;
+    gap: 39px;
+
+    .first-hero-part {
+      margin-top: 36px;
+      .input-form {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 62px;
+
+        .input-field {
+          width: 261px;
+          border-left: 0;
+          border-right: 0;
+          border-top: 0;
+          border-bottom: 1px solid $line-color;
+          outline: none;
+          padding: 8px 0;
+          font-weight: 400;
+          font-size: 16px;
+          color: $fourthfontcolor;
+        }
+
+        button {
+          background-color: transparent;
+          border: none;
+          width: 19px;
+          margin-left: -20px;
+        }
+      }
+
+      .category-nav {
+        .categories {
+          margin-top: 62px;
+          font-weight: 500;
+          font-size: 20px;
+          color: $firstfontcolor;
+          margin-bottom: 22px;
+        }
+
+        nav {
+          display: flex;
+          flex-direction: column;
+
+          gap: 10px;
+
+          .nav-link {
+            color: $fourthfontcolor;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .hero-last-part {
+    display: flex;
+    flex-direction: column;
+    margin-top: 64px;
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      font-weight: 400;
+      font-size: 14px;
+      justify-content: center;
+      align-items: center;
+
+      .first-button {
+        background: $firstfontcolor;
+        border: 1px solid #ffffff;
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
+        color: $thirdfontcolor;
+      }
+
+      .next-button {
+        background: $thirdfontcolor;
+        border: 1px solid $line-color;
+        border-radius: 4px;
+        width: 40px;
+        height: 40px;
+        color: $firstfontcolor;
+      }
+    }
+
+    .second-hero-ended {
+      display: none;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .blog-page {
+    margin-top: 39px;
+    .subhead {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+    }
+    .hero-container {
+      flex-direction: column-reverse;
+      gap: 0;
+      margin-top: 39px;
+
+      img {
+        height: 192px;
+        width: 100%;
+      }
+
+      .first-hero-part {
+        margin-top: 0;
+        .input-form {
+          display: none;
+        }
+        .category-nav {
+          margin-top: 45px;
+          .categories {
+            margin-top: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+            color: $firstfontcolor;
+            margin-bottom: 20px;
+          }
+
+          nav {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .nav-link {
+              color: $fourthfontcolor;
+              text-decoration: none;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+    .hero-huge-part {
+      .second-hero-part {
+        margin-top: 0;
+        img {
+          height: 192px;
+        }
+      }
+
+      .hero-last-part {
+        margin-top: 49px;
+        .buttons {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+@import "../../../variables";
+.account-page .hero-container {
+  .subhead {
+    text-align: center;
+    font-weight: 500;
+    font-size: 33px;
+    color: $firstfontcolor;
+    margin-top: 96px;
+  }
+
+  .slider-part {
+    display: flex;
+    flex-direction: row;
+    margin-top: 64px;
+    align-items: center;
+
+    button {
+      display: none;
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: 49px;
+    font-weight: 400;
+    font-size: 20px;
+
+    .nav-link-1 {
+      text-decoration: none;
+      color: $firstfontcolor;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      color: $fourthfontcolor;
+    }
+
+    .nav-link-visible {
+      text-decoration: none;
+      color: $fourthfontcolor;
+    }
+  }
+
+  .header-ended-line {
+    width: 100%;
+    border: 1px solid $line-color;
+    margin-top: 34px;
+  }
+}
+
+.text-part {
+  display: flex;
+  flex-direction: column;
+  margin-top: 73px;
+  font-weight: 400;
+  font-size: 16px;
+
+  .first-rows {
+    display: flex;
+    flex-direction: row;
+
+    .text {
+      color: $firstfontcolor;
+    }
+
+    nav {
+      .nav-link {
+        text-decoration: none;
+        color: $secondfontcolor;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  .second-rows {
+    display: flex;
+    flex-direction: row;
+
+    .part-of-text {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .text {
+      color: $firstfontcolor;
+    }
+
+    nav {
+      .nav-link {
+        text-decoration: none;
+        color: $secondfontcolor;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  .account-page .hero-container {
+    .subhead {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 26px;
+      margin-top: 39px;
+    }
+
+    .slider-part {
+      margin-top: 24px;
+
+      button {
+        display: flex;
+        border: none;
+        background-color: transparent;
+
+        img {
+          margin-left: 6px;
+        }
+      }
+
+      nav {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 27px;
+        gap: 24px;
+        margin-left: 7.34px;
+
+        .nav-link-visible {
+          display: none;
+        }
+      }
+    }
+
+    .header-ended-line {
+      margin-top: 16px;
+    }
+  }
+
+  .text-part {
+    margin-top: 39px;
+    font-size: 12px;
+
+    .second-rows {
+      display: flex;
+      flex-direction: column;
+      font-size: 12px;
+
+      .part-of-text {
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+      }
+
+      nav {
+        .nav-link {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

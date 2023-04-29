@@ -1,16 +1,32 @@
 import React from "react";
 import "./App.scss";
-import { Header } from "./Header";
-import { HomePage } from "./pages/HomePage/HomePage";
+import { Header } from "./app/components/Header/Header";
+import { HomePage } from "./app/pages/HomePage/HomePage";
+import { Footer } from "./app/components/Footer/Footer";
+import { AccountPage } from "./app/pages/AccountPage/Account";
+import { BlogPage } from "./app/pages/BlogPage/BlogPage";
+import { ProductPage } from "./app/pages/ProductPage/ProductPage";
+import { SigninPage } from "./app/pages/SigninPage/SigninPage";
+import { RegisterPage } from "./app/pages/RegisterPage/RegisterPage";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Header />
-      <main>
-        <HomePage />
-      </main>
-      <footer></footer>
+      <div className="container">
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="product" element={<ProductPage />} />
+            <Route path="blog" element={<BlogPage />} />
+            <Route path="account" element={<AccountPage />} />
+            <Route path="signin" element={<SigninPage />} />
+            <Route path="register" element={<RegisterPage />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

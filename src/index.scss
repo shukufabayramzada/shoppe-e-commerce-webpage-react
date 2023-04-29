@@ -19,9 +19,116 @@ body {
   max-width: 1248px;
   margin-left: auto;
   margin-right: auto;
+
+  .first-boxes-part {
+    display: flex;
+    flex-direction: row;
+    gap: 54px;
+    width: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+     nav {
+    margin-top: 24px;
+  .catalog-element {
+    font-weight: 400;
+    font-size: 20px;
+    text-decoration: none;
+    color: $firstfontcolor;
+    padding-top: 24px;
+  }
+  }
+  .catalog-price {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    color: $secondfontcolor;
+    margin-top: 16px;
+  }
+
+  .image-wrapper {
+    position: relative;
+    display: flex;
+  }
+
+  .add-to-cart-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px 4px 0px 0px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21px;
+    height: 65px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+
+  .image-wrapper:hover button {
+    opacity: 1;
+  }
+
+  .hal-earings {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .plaine-necklace {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+
+  .kaede-hear-pin {
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+  }
+ 
 }
+}
+
 @media (max-width: 375px) {
   .container {
     max-width: 288px;
+
+    
+    .first-boxes-part {
+      overflow-x: auto;
+      gap: 12px;
+
+      .add-to-cart-button {
+        font-weight: 400;
+        font-size: 12px;
+        height: 30px;
+      }
+
+      img {
+        width: 136px;
+        height: 136px;
+      }
+
+      nav {
+        margin-top: 6px;
+
+        .catalog-element {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+
+      .catalog-price {
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 4px;
+      }
+    }
   }
 }

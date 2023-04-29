@@ -1,8 +1,6 @@
-@import "variables";
-
+@import "../../../variables";
 header {
   padding-top: 66px;
-  margin-bottom: 50px;
 
   .headercontainer {
     display: flex;
@@ -51,6 +49,9 @@ header {
       border: none;
       background-color: transparent;
     }
+    .account {
+      display: flex;
+    }
   }
 
   .buttons {
@@ -67,6 +68,10 @@ header {
     .mobile-only {
       display: none;
     }
+  }
+
+  .burgerMenuClosed {
+    display: none;
   }
 }
 
@@ -96,6 +101,48 @@ header {
           background-color: transparent;
           border: none;
         }
+      }
+      .burgerMenuVisible {
+        display: block;
+        position: absolute;
+        background-color: white;
+        font-size: 12px;
+        nav {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 27px;
+
+          .nav-link {
+            padding: 5px;
+            text-decoration: none;
+            color: $firstfontcolor;
+          }
+        }
+      }
+    }
+    .input-group {
+      display: flex;
+      flex-direction: row;
+      margin-top: 9px;
+      width: 100%;
+      height: 32px;
+      gap: 8px;
+      background: #efefef;
+      border-radius: 4px;
+      padding-left: 10px;
+
+      .mobile-only {
+        display: block;
+        border: none;
+        outline: none;
+        font-weight: 400;
+        font-size: 14px;
+        color: $fourthfontcolor;
+        background-color: transparent;
       }
     }
   }

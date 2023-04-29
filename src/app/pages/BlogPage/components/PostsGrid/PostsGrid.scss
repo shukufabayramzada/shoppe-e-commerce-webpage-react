@@ -1,0 +1,81 @@
+@import "../../../../../variables";
+.blog-page .second-hero-part {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+  row-gap: 64px;
+
+  img {
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .date {
+    font-weight: 400;
+    font-size: 14px;
+    color: $fourthfontcolor;
+    margin-top: 22px;
+  }
+
+  .subhead {
+    font-weight: 400;
+    font-size: 20px;
+    color: $firstfontcolor;
+    margin-top: 5px;
+  }
+
+  .text {
+    font-weight: 400;
+    font-size: 16px;
+    color: $fourthfontcolor;
+    margin-top: 14px;
+  }
+
+  nav {
+    margin-top: 24px;
+
+    .nav-link {
+      text-decoration: none;
+      color: $secondfontcolor;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}
+@media (max-width: 375px) {
+  .blog-page .second-hero-part {
+    margin-top: 39px;
+    grid-template-columns: 1fr;
+    row-gap: 39px;
+
+    .date {
+      margin-top: 15px;
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+    .subhead {
+      margin-top: 2px;
+      font-size: 16px;
+      line-height: 27px;
+    }
+
+    .text {
+      font-size: 12px;
+      line-height: 20px;
+      margin-top: 5px;
+    }
+
+    nav {
+      margin-top: 16px;
+
+      .nav-link {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+  }
+}

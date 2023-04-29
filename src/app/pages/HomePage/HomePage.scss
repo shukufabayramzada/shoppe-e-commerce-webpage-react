@@ -1,0 +1,49 @@
+@import "../../../variables";
+
+.home-page {
+  .subhead {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 64px;
+    font-weight: 500;
+
+    .shoplatest {
+      line-height: 43px;
+      font-size: 33px;
+      color: $firstfontcolor;
+    }
+
+    nav {
+      .nav-link {
+        font-size: 20px;
+        line-height: 26px;
+        color: $secondfontcolor;
+        text-transform: capitalize;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .home-page {
+    .subhead {
+      margin-top: 21px;
+      font-weight: 400;
+
+      .shoplatest {
+        font-size: 16px;
+        line-height: 27px;
+      }
+
+      nav {
+        .nav-link {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}
