@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./App.scss";
 import { Header } from "./app/components/Header/Header";
 import { HomePage } from "./app/pages/HomePage/HomePage";
@@ -28,6 +28,6 @@ function App() {
         <Footer />
       </div>
     </>
-  );
+  )
 }
 export default App;

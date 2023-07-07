@@ -5,7 +5,6 @@ import secondPost from "../../../assets/images/image 2.png";
 import thirdPost from "../../../assets/images/image 3.png";
 import fourthPost from "../../../assets/images/image 4.png";
 import { PostsGrid } from "./components/PostsGrid/PostsGrid";
-
 export const BlogPage = () => {
   const posts = [
     {

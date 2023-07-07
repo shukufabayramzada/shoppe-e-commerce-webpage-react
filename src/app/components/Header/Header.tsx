@@ -7,6 +7,7 @@ import accountIcon from "../../../assets/icons/account icon.svg";
 import burgerMenu from "../../../assets/icons/Group.svg";
 import searchIcon from "../../../assets/icons/new search icon.svg";
 import { Link } from "react-router-dom";
+import BurgerMenu from "../../../shared/BurgerMenu/BurgerMenu";
 
 export const Header = () => {
   const [isOpen, setisOpen] = useState(false);
@@ -14,6 +15,18 @@ export const Header = () => {
     setisOpen(!isOpen);
   };
   console.log("isOpen", isOpen);
+
+  const Home = () => <h1>Home Page</h1>;
+  const About = () => <h1>About Page</h1>;
+  const Services = () => <h1>Services Page</h1>;
+  const Contact = () => <h1>Contact Page</h1>;
+  
+  const menuItems = [
+    { path: '/', label: 'Home' },
+    { path: '/product', label: 'Shop' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/account', label: 'Account' },
+  ];
 
   return (
     <header>
@@ -45,31 +58,7 @@ export const Header = () => {
           </div>
         </div>
         <div className="buttons">
-          <button className="mobile-only">
-            <img src={shopCart} />
-          </button>
-          <button
-            onClick={() => handleHamburgerIsOpen()}
-            className="mobile-only"
-          >
-            <img src={burgerMenu} />
-            <div className={isOpen ? "burgerMenuVisible" : "burgerMenuClosed"}>
-              <nav>
-                <Link to="product" className="nav-link">
-                  Shop
-                </Link>
-                <Link to="blog" className="nav-link">
-                  Blog
-                </Link>
-                <Link to="/" className="nav-link">
-                  Our Story
-                </Link>
-                <Link to="account" className="nav-link">
-                  Account
-                </Link>
-              </nav>
-            </div>
-          </button>
+         <BurgerMenu menuItems={menuItems} />
         </div>
       </div>
       <div className="input-group">
